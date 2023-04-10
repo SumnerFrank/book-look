@@ -4,6 +4,10 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
+
+    },
+
+    Mutation: {
         
     }
 }
