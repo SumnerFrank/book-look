@@ -20,7 +20,6 @@ const LoginForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-
     try {
       const { data } = await loginUser ({
         variables: { ...userFormData }
@@ -60,6 +59,7 @@ const LoginForm = () => {
     });
   };
 
+  
   return (
     <>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
