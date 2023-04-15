@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.11",
-    "graphql": "^16.6.0"
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^9.0.0",
+    "yarn": "^1.22.19"
   }
 }
