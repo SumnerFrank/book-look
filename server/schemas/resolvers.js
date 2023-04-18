@@ -17,7 +17,13 @@ const resolvers = {
     Mutation: {
         login: async(parent, { email, password }) =>{
             const user = await User.findOne({ email });
-            if (!user || user.password !== password) {
+            console.log(user);
+            console.log(password);
+            if (!user) {
+                throw new AuthenticationError('Incorrect username or password')
+            } 
+            const validatedPassword = user.isCorrectPassword(password)
+            if (!validatedPassword) {
                 throw new AuthenticationError('Incorrect username or password')
             }
             const token = signToken(user);
